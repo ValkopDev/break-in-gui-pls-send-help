@@ -1,3 +1,4 @@
+
 function sandbox(var,func)
 	local env = getfenv(func)
 	local newenv = setmetatable({},{
@@ -339,7 +340,7 @@ function onclick()
 
 		game:GetService("ReplicatedStorage").RemoteEvents.Sounds:FireServer(unpack(args))
 
-		wait(0.05)
+		wait(1)
 
 	end
 	
