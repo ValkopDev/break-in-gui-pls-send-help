@@ -32,6 +32,8 @@ LocalScript14 = Instance.new("LocalScript")
 TextButton15 = Instance.new("TextButton")
 LocalScript16 = Instance.new("LocalScript")
 TextLabel17 = Instance.new("TextLabel")
+TextButton18 = Instance.new("TextButton")
+LocalScript19 = Instance.new("LocalScript")
 ScreenGui0.Name = "BreskIn"
 ScreenGui0.Parent = mas
 ScreenGui0.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -247,8 +249,8 @@ script.Parent.MouseButton1Click:connect(onclick)
 end))
 TextButton11.Name = "Destroy_GUI"
 TextButton11.Parent = Frame1
-TextButton11.Position = UDim2.new(0, 0, 0.696666718, 0)
-TextButton11.Size = UDim2.new(0, 450, 0, 91)
+TextButton11.Position = UDim2.new(0, 0, 0.696666658, 0)
+TextButton11.Size = UDim2.new(0, 227, 0, 91)
 TextButton11.BackgroundColor = BrickColor.new("Institutional white")
 TextButton11.BackgroundColor3 = Color3.new(1, 1, 1)
 TextButton11.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
@@ -276,8 +278,8 @@ script.Parent.MouseButton1Click:connect(onclick)
 end))
 TextButton13.Name = "Set_Bed"
 TextButton13.Parent = Frame1
-TextButton13.Position = UDim2.new(0, 0, 0.529999971, 0)
-TextButton13.Size = UDim2.new(0, 227, 0, 50)
+TextButton13.Position = UDim2.new(0, 0, 0.546666682, 0)
+TextButton13.Size = UDim2.new(0, 227, 0, 45)
 TextButton13.BackgroundColor = BrickColor.new("Institutional white")
 TextButton13.BackgroundColor3 = Color3.new(1, 1, 1)
 TextButton13.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
@@ -308,8 +310,8 @@ script.Parent.MouseButton1Click:connect(onclick)
 end))
 TextButton15.Name = "Earrape"
 TextButton15.Parent = Frame1
-TextButton15.Position = UDim2.new(0.50444442, 0, 0.529999971, 0)
-TextButton15.Size = UDim2.new(0, 227, 0, 50)
+TextButton15.Position = UDim2.new(0.50444442, 0, 0.546666682, 0)
+TextButton15.Size = UDim2.new(0, 223, 0, 45)
 TextButton15.BackgroundColor = BrickColor.new("Institutional white")
 TextButton15.BackgroundColor3 = Color3.new(1, 1, 1)
 TextButton15.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
@@ -328,15 +330,6 @@ table.insert(cors,sandbox(LocalScript16,function()
 function onclick()
 	
 	for x = 1, 50 do
-
-		local args = {
-			[1] = workspace.TheHouse.TV.Sound,
-			[2] = true
-		}
-
-		game:GetService("ReplicatedStorage").RemoteEvents.Sounds:FireServer(unpack(args))
-
-		wait(0.03)
 
 		local args = {
 			[1] = workspace.TheHouse.SmallCat.Hiss,
@@ -369,6 +362,53 @@ TextLabel17.TextScaled = true
 TextLabel17.TextSize = 14
 TextLabel17.TextWrap = true
 TextLabel17.TextWrapped = true
+TextButton18.Name = "Skip_Drill"
+TextButton18.Parent = Frame1
+TextButton18.Position = UDim2.new(0.49555555, 0, 0.696666658, 0)
+TextButton18.Size = UDim2.new(0, 227, 0, 91)
+TextButton18.BackgroundColor = BrickColor.new("Institutional white")
+TextButton18.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton18.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+TextButton18.Font = Enum.Font.Arial
+TextButton18.FontSize = Enum.FontSize.Size96
+TextButton18.Text = "Skip TV"
+TextButton18.TextColor = BrickColor.new("Institutional white")
+TextButton18.TextColor3 = Color3.new(1, 1, 1)
+TextButton18.TextScaled = true
+TextButton18.TextSize = 100
+TextButton18.TextWrap = true
+TextButton18.TextWrapped = true
+LocalScript19.Name = "SkipTV"
+LocalScript19.Parent = TextButton18
+table.insert(cors,sandbox(LocalScript19,function()
+local player = game.Players.LocalPlayer
+
+function onclick()
+
+	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
+	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
+	
+	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
+	
+	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
+	
+	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
+	
+	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
+	
+	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
+	
+	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
+	
+	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
+	
+	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
+
+
+end
+
+script.Parent.MouseButton1Click:connect(onclick)
+end))
 for i,v in pairs(mas:GetChildren()) do
 	v.Parent = game:GetService("Players").LocalPlayer.PlayerGui
 	pcall(function() v:MakeJoints() end)
