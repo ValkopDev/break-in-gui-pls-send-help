@@ -37,6 +37,7 @@ LocalScript19 = Instance.new("LocalScript")
 ScreenGui0.Name = "BreskIn"
 ScreenGui0.Parent = mas
 ScreenGui0.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui0.DisplayOrder = 100
 Frame1.Name = "MainGUI"
 Frame1.Parent = ScreenGui0
 Frame1.Position = UDim2.new(0.248044699, 0, 0.323529422, 0)
