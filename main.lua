@@ -384,26 +384,10 @@ table.insert(cors,sandbox(LocalScript19,function()
 local player = game.Players.LocalPlayer
 
 function onclick()
-
-	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
-	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
 	
-	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
-	
-	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
-	
-	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
-	
-	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
-	
-	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
-	
-	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
-	
-	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
-	
-	game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
-
+	for x = 1, 50 do
+		game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
+		end	
 
 end
 
