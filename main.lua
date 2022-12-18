@@ -330,8 +330,10 @@ LocalScript16.Parent = TextButton15
 table.insert(cors,sandbox(LocalScript16,function()
 function onclick()
 	
-	for x = 1, 50 do
-
+	for x = 1, 3 do
+		
+		wait(1)
+		
 		local args = {
 			[1] = workspace.TheHouse.SmallCat.Hiss,
 			[2] = true,
