@@ -1,4 +1,3 @@
-
 function sandbox(var,func)
 	local env = getfenv(func)
 	local newenv = setmetatable({},{
@@ -329,8 +328,6 @@ LocalScript16.Name = "ouch"
 LocalScript16.Parent = TextButton15
 table.insert(cors,sandbox(LocalScript16,function()
 function onclick()
-	
-	for x = 1, 3 do
 		
 		wait(1)
 		
@@ -342,9 +339,51 @@ function onclick()
 
 		game:GetService("ReplicatedStorage").RemoteEvents.Sounds:FireServer(unpack(args))
 
-		wait(1)
+	wait(1)
+	wait(1)
 
-	end
+	local args = {
+		[1] = workspace.TheHouse.SmallCat.Hiss,
+		[2] = true,
+		[3] = 1.5
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.Sounds:FireServer(unpack(args))
+
+	wait(1)
+	wait(1)
+
+	local args = {
+		[1] = workspace.TheHouse.SmallCat.Hiss,
+		[2] = true,
+		[3] = 1.5
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.Sounds:FireServer(unpack(args))
+
+	wait(1)
+	wait(1)
+
+	local args = {
+		[1] = workspace.TheHouse.SmallCat.Hiss,
+		[2] = true,
+		[3] = 1.5
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.Sounds:FireServer(unpack(args))
+
+	wait(1)
+	wait(1)
+
+	local args = {
+		[1] = workspace.TheHouse.SmallCat.Hiss,
+		[2] = true,
+		[3] = 1.5
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.Sounds:FireServer(unpack(args))
+
+	wait(1)
 	
 end
 
