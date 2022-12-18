@@ -1,4 +1,4 @@
-
+ 
 function sandbox(var,func)
 	local env = getfenv(func)
 	local newenv = setmetatable({},{
@@ -450,7 +450,7 @@ TextButton20.BackgroundColor3 = Color3.new(1, 1, 1)
 TextButton20.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
 TextButton20.Font = Enum.Font.Arial
 TextButton20.FontSize = Enum.FontSize.Size96
-TextButton20.Text = "Energy Spam"
+TextButton20.Text = "Energy Spam (uses cookies)"
 TextButton20.TextColor = BrickColor.new("Institutional white")
 TextButton20.TextColor3 = Color3.new(1, 1, 1)
 TextButton20.TextScaled = true
@@ -462,11 +462,31 @@ LocalScript21.Parent = TextButton20
 table.insert(cors,sandbox(LocalScript21,function()
 function onclick()
 
-	game:GetService("ReplicatedStorage").RemoteEvents.BedTime:FireServer()
-	game:GetService("ReplicatedStorage").RemoteEvents.BedTime:FireServer()
-	game:GetService("ReplicatedStorage").RemoteEvents.BedTime:FireServer()
-	game:GetService("ReplicatedStorage").RemoteEvents.BedTime:FireServer()
-	game:GetService("ReplicatedStorage").RemoteEvents.BedTime:FireServer()
+	local args = {
+		[1] = 30,
+		[2] = "Cookie"
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.Energy:FireServer(unpack(args))
+	local args = {
+		[1] = 30,
+		[2] = "Cookie"
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.Energy:FireServer(unpack(args))
+	local args = {
+		[1] = 30,
+		[2] = "Cookie"
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.Energy:FireServer(unpack(args))
+	local args = {
+		[1] = 30,
+		[2] = "Cookie"
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.Energy:FireServer(unpack(args))
+
 	
 end
 
@@ -488,17 +508,13 @@ TextButton22.TextScaled = true
 TextButton22.TextSize = 14
 TextButton22.TextWrap = true
 TextButton22.TextWrapped = true
-LocalScript23.Name = "GetCookies"
+LocalScript23.Name = "GetChips"
 LocalScript23.Parent = TextButton22
 table.insert(cors,sandbox(LocalScript23,function()
 function onclick()
-	local args = {
-		[1] = "Cookie"
-	}
-
 	game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(unpack(args))
-	wait(0.1)
 	local args = {
+		
 		[1] = "Chips"
 	}
 end
