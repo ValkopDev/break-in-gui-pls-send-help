@@ -29,6 +29,9 @@ TextButton11 = Instance.new("TextButton")
 LocalScript12 = Instance.new("LocalScript")
 TextButton13 = Instance.new("TextButton")
 LocalScript14 = Instance.new("LocalScript")
+TextButton15 = Instance.new("TextButton")
+LocalScript16 = Instance.new("LocalScript")
+TextLabel17 = Instance.new("TextLabel")
 ScreenGui0.Name = "BreskIn"
 ScreenGui0.Parent = mas
 ScreenGui0.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -274,7 +277,7 @@ end))
 TextButton13.Name = "Set_Bed"
 TextButton13.Parent = Frame1
 TextButton13.Position = UDim2.new(0, 0, 0.529999971, 0)
-TextButton13.Size = UDim2.new(0, 450, 0, 50)
+TextButton13.Size = UDim2.new(0, 227, 0, 50)
 TextButton13.BackgroundColor = BrickColor.new("Institutional white")
 TextButton13.BackgroundColor3 = Color3.new(1, 1, 1)
 TextButton13.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
@@ -303,6 +306,69 @@ end
 
 script.Parent.MouseButton1Click:connect(onclick)
 end))
+TextButton15.Name = "Earrape"
+TextButton15.Parent = Frame1
+TextButton15.Position = UDim2.new(0.50444442, 0, 0.529999971, 0)
+TextButton15.Size = UDim2.new(0, 227, 0, 50)
+TextButton15.BackgroundColor = BrickColor.new("Institutional white")
+TextButton15.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton15.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+TextButton15.Font = Enum.Font.Arial
+TextButton15.FontSize = Enum.FontSize.Size14
+TextButton15.Text = "Earrape 50 times"
+TextButton15.TextColor = BrickColor.new("Institutional white")
+TextButton15.TextColor3 = Color3.new(1, 1, 1)
+TextButton15.TextScaled = true
+TextButton15.TextSize = 14
+TextButton15.TextWrap = true
+TextButton15.TextWrapped = true
+LocalScript16.Name = "ouch"
+LocalScript16.Parent = TextButton15
+table.insert(cors,sandbox(LocalScript16,function()
+function onclick()
+	
+	for x = 1, 50 do
+
+		local args = {
+			[1] = workspace.TheHouse.TV.Sound,
+			[2] = true
+		}
+
+		game:GetService("ReplicatedStorage").RemoteEvents.Sounds:FireServer(unpack(args))
+
+		wait(0.01)
+
+		local args = {
+			[1] = workspace.TheHouse.SmallCat.Hiss,
+			[2] = true,
+			[3] = 1.5
+		}
+
+		game:GetService("ReplicatedStorage").RemoteEvents.Sounds:FireServer(unpack(args))
+
+		wait(0.01)
+
+	end
+	
+end
+
+script.Parent.MouseButton1Click:connect(onclick)
+end))
+TextLabel17.Name = "Beta"
+TextLabel17.Parent = Frame1
+TextLabel17.Size = UDim2.new(0, 450, 0, 19)
+TextLabel17.BackgroundColor = BrickColor.new("Institutional white")
+TextLabel17.BackgroundColor3 = Color3.new(1, 1, 1)
+TextLabel17.BackgroundTransparency = 1
+TextLabel17.Font = Enum.Font.Code
+TextLabel17.FontSize = Enum.FontSize.Size14
+TextLabel17.Text = "Beta (NEW FEATURES INCOMING)"
+TextLabel17.TextColor = BrickColor.new("Institutional white")
+TextLabel17.TextColor3 = Color3.new(1, 1, 1)
+TextLabel17.TextScaled = true
+TextLabel17.TextSize = 14
+TextLabel17.TextWrap = true
+TextLabel17.TextWrapped = true
 for i,v in pairs(mas:GetChildren()) do
 	v.Parent = game:GetService("Players").LocalPlayer.PlayerGui
 	pcall(function() v:MakeJoints() end)
