@@ -336,7 +336,7 @@ function onclick()
 
 		game:GetService("ReplicatedStorage").RemoteEvents.Sounds:FireServer(unpack(args))
 
-		wait(0.01)
+		wait(0.03)
 
 		local args = {
 			[1] = workspace.TheHouse.SmallCat.Hiss,
@@ -346,7 +346,7 @@ function onclick()
 
 		game:GetService("ReplicatedStorage").RemoteEvents.Sounds:FireServer(unpack(args))
 
-		wait(0.01)
+		wait(0.05)
 
 	end
 	
