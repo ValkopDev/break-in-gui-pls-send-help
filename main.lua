@@ -1,4 +1,4 @@
- 
+
 function sandbox(var,func)
 	local env = getfenv(func)
 	local newenv = setmetatable({},{
@@ -512,11 +512,11 @@ LocalScript23.Name = "GetChips"
 LocalScript23.Parent = TextButton22
 table.insert(cors,sandbox(LocalScript23,function()
 function onclick()
-	game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(unpack(args))
 	local args = {
 		
 		[1] = "Chips"
 	}
+	game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(unpack(args))
 end
 
 script.Parent.MouseButton1Click:connect(onclick)
