@@ -1,3 +1,4 @@
+
 function sandbox(var,func)
 	local env = getfenv(func)
 	local newenv = setmetatable({},{
@@ -34,6 +35,10 @@ LocalScript16 = Instance.new("LocalScript")
 TextLabel17 = Instance.new("TextLabel")
 TextButton18 = Instance.new("TextButton")
 LocalScript19 = Instance.new("LocalScript")
+TextButton20 = Instance.new("TextButton")
+LocalScript21 = Instance.new("LocalScript")
+TextButton22 = Instance.new("TextButton")
+LocalScript23 = Instance.new("LocalScript")
 ScreenGui0.Name = "BreskIn"
 ScreenGui0.Parent = mas
 ScreenGui0.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -67,7 +72,7 @@ TextLabel3.TextWrapped = true
 TextButton4.Name = "Get_10_Cookies"
 TextButton4.Parent = Frame1
 TextButton4.Position = UDim2.new(0, 0, 0.213333338, 0)
-TextButton4.Size = UDim2.new(0, 450, 0, 50)
+TextButton4.Size = UDim2.new(0, 312, 0, 50)
 TextButton4.BackgroundColor = BrickColor.new("Institutional white")
 TextButton4.BackgroundColor3 = Color3.new(1, 1, 1)
 TextButton4.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
@@ -251,7 +256,7 @@ end))
 TextButton11.Name = "Destroy_GUI"
 TextButton11.Parent = Frame1
 TextButton11.Position = UDim2.new(0, 0, 0.696666658, 0)
-TextButton11.Size = UDim2.new(0, 227, 0, 91)
+TextButton11.Size = UDim2.new(0, 227, 0, 50)
 TextButton11.BackgroundColor = BrickColor.new("Institutional white")
 TextButton11.BackgroundColor3 = Color3.new(1, 1, 1)
 TextButton11.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
@@ -432,6 +437,70 @@ function onclick()
 		game:GetService("ReplicatedStorage").RemoteEvents.SkipTele:FireServer()
 		end	
 
+end
+
+script.Parent.MouseButton1Click:connect(onclick)
+end))
+TextButton20.Name = "EnergySpam"
+TextButton20.Parent = Frame1
+TextButton20.Position = UDim2.new(0, 0, 0.863333344, 0)
+TextButton20.Size = UDim2.new(0, 223, 0, 41)
+TextButton20.BackgroundColor = BrickColor.new("Institutional white")
+TextButton20.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton20.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+TextButton20.Font = Enum.Font.Arial
+TextButton20.FontSize = Enum.FontSize.Size96
+TextButton20.Text = "Energy Spam"
+TextButton20.TextColor = BrickColor.new("Institutional white")
+TextButton20.TextColor3 = Color3.new(1, 1, 1)
+TextButton20.TextScaled = true
+TextButton20.TextSize = 100
+TextButton20.TextWrap = true
+TextButton20.TextWrapped = true
+LocalScript21.Name = "Spam"
+LocalScript21.Parent = TextButton20
+table.insert(cors,sandbox(LocalScript21,function()
+function onclick()
+
+	game:GetService("ReplicatedStorage").RemoteEvents.BedTime:FireServer()
+	game:GetService("ReplicatedStorage").RemoteEvents.BedTime:FireServer()
+	game:GetService("ReplicatedStorage").RemoteEvents.BedTime:FireServer()
+	game:GetService("ReplicatedStorage").RemoteEvents.BedTime:FireServer()
+	game:GetService("ReplicatedStorage").RemoteEvents.BedTime:FireServer()
+	
+end
+
+script.Parent.MouseButton1Click:connect(onclick)
+end))
+TextButton22.Name = "GetChips"
+TextButton22.Parent = Frame1
+TextButton22.Position = UDim2.new(0.693333328, 0, 0.213333338, 0)
+TextButton22.Size = UDim2.new(0, 138, 0, 50)
+TextButton22.BackgroundColor = BrickColor.new("Institutional white")
+TextButton22.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton22.Style = Enum.ButtonStyle.RobloxRoundDefaultButton
+TextButton22.Font = Enum.Font.Arial
+TextButton22.FontSize = Enum.FontSize.Size14
+TextButton22.Text = "Get chips"
+TextButton22.TextColor = BrickColor.new("Institutional white")
+TextButton22.TextColor3 = Color3.new(1, 1, 1)
+TextButton22.TextScaled = true
+TextButton22.TextSize = 14
+TextButton22.TextWrap = true
+TextButton22.TextWrapped = true
+LocalScript23.Name = "GetCookies"
+LocalScript23.Parent = TextButton22
+table.insert(cors,sandbox(LocalScript23,function()
+function onclick()
+	local args = {
+		[1] = "Cookie"
+	}
+
+	game:GetService("ReplicatedStorage").RemoteEvents.GiveTool:FireServer(unpack(args))
+	wait(0.1)
+	local args = {
+		[1] = "Chips"
+	}
 end
 
 script.Parent.MouseButton1Click:connect(onclick)
